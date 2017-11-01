@@ -1,6 +1,7 @@
 <button class="btn btn-success" [disabled]="!allowNewCandidate" (click)="onCreateCandidate()">Add Candidate</button>
 <p [innerText]="allowNewCandidate"></p>
 <p>{{candidateStatus}}</p>
+<input type="text" class="form-control" [(ngModel)]="candidateStatus">
 <hr />
 <app-candidate></app-candidate>
 <app-candidate></app-candidate>
