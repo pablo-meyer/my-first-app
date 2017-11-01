@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 @Component({
-    selector: 'app-student',
+    selector: 'app-candidate',
     templateUrl: './candidate.component.html'
 })
 export class CandidateComponent {}
