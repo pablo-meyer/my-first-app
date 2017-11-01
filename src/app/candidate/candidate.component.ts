@@ -3,4 +3,10 @@ import {Component} from '@angular/core';
     selector: 'app-candidate',
     templateUrl: './candidate.component.html'
 })
-export class CandidateComponent {}
+export class CandidateComponent {
+    firstName: string  = 'Pablo';
+    lastName: string = 'Meyer';
+    id: number = 999;
+    fullName() { return this.firstName + ' ' + this.lastName; }
+
+}

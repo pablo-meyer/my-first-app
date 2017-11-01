@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./candidates.component.css']
 })
 export class CandidatesComponent implements OnInit {
-
-  constructor() { }
+  allowNewCandidate= false;
+  candidateStatus= 'Inactive';
+  constructor() {
+    setTimeout(()  => {
+      this.allowNewCandidate = true;
+    }, 1000);
+  }
 
   ngOnInit() {
   }
 
+  onCreateCandidate() {
+    this.candidateStatus = 'Done';
+  }
 }

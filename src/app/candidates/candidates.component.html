@@ -1,2 +1,6 @@
+<button class="btn btn-success" [disabled]="!allowNewCandidate" (click)="onCreateCandidate()">Add Candidate</button>
+<p [innerText]="allowNewCandidate"></p>
+<p>{{candidateStatus}}</p>
+<hr />
 <app-candidate></app-candidate>
 <app-candidate></app-candidate>
