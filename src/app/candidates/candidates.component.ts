@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CandidatesComponent implements OnInit {
   allowNewCandidate= false;
   candidateStatus= 'Inactive';
+  candidateName = '';
+  candidateCreated = false;
   constructor() {
     setTimeout(()  => {
       this.allowNewCandidate = true;
@@ -18,6 +20,7 @@ export class CandidatesComponent implements OnInit {
   }
 
   onCreateCandidate() {
-    this.candidateStatus = 'Done';
+    this.candidateCreated = true;
+    this.candidateStatus = `Candidat is created, candidate name is ${this.candidateName}`;
   }
 }

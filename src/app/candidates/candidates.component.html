@@ -1,7 +1,8 @@
-<button class="btn btn-success" [disabled]="!allowNewCandidate" (click)="onCreateCandidate()">Add Candidate</button>
-<p [innerText]="allowNewCandidate"></p>
-<p>{{candidateStatus}}</p>
-<input type="text" class="form-control" [(ngModel)]="candidateStatus">
+<button class="btn btn-success" [disabled]="candidateName == ''" (click)="onCreateCandidate()">Add Candidate</button>
+<!-- <p [innerText]="allowNewCandidate"></p> -->
+<!-- <p>{{candidateStatus}}</p> -->
+<p *ngIf="candidateCreated">Candidat is created, candidate name is {{candidateName}}</p>
+<input type="text" class="form-control" [(ngModel)]="candidateName">
 <hr />
 <app-candidate></app-candidate>
 <app-candidate></app-candidate>
