@@ -8,6 +8,7 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
+    new Recipe('Cake', 'Chocolate Cake', 'https://cdn.pinchofyum.com/wp-content/uploads/Chocolate-Cake-5-1-Yoast.jpg'),
     new Recipe('Cake', 'Chocolate Cake', 'https://cdn.pinchofyum.com/wp-content/uploads/Chocolate-Cake-5-1-Yoast.jpg')
   ];
   constructor() { }
