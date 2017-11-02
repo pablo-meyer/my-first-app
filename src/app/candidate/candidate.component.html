@@ -1,2 +1,2 @@
-<p>The candidate's full name is: {{ fullName() }} with id {{ id }}</p>
+<p [ngStyle]="{ backgroundColor: status === 'online'? 'green':'red'}" [ngClass]="{'online':status==='online'}">The candidate's full name is: {{ fullName() }} with id {{ id }} and my status is {{ status }}</p>
 <p></p>

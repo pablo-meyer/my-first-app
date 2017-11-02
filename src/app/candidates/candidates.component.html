@@ -1,8 +1,15 @@
 <button class="btn btn-success" [disabled]="candidateName == ''" (click)="onCreateCandidate()">Add Candidate</button>
 <!-- <p [innerText]="allowNewCandidate"></p> -->
 <!-- <p>{{candidateStatus}}</p> -->
-<p *ngIf="candidateCreated">Candidat is created, candidate name is {{candidateName}}</p>
+<p *ngIf="candidateCreated;else noCandidate">Candidat is created, candidate name is {{candidateName}}</p>
+<ng-template #noCandidate>
+    <p>No candidate was created</p>
+</ng-template>
 <input type="text" class="form-control" [(ngModel)]="candidateName">
 <hr />
-<app-candidate></app-candidate>
-<app-candidate></app-candidate>
+<!-- <app-candidate></app-candidate>
+<app-candidate></app-candidate> -->
+<app-candidate *ngFor="let candidate of candidates; let i = index"></app-candidate>
+<div *ngFor="let attempt of attempts; let i = index">
+    {{attempt}} -- {{i}}
+</div>

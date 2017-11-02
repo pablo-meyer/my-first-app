@@ -10,6 +10,8 @@ export class CandidatesComponent implements OnInit {
   candidateStatus= 'Inactive';
   candidateName = '';
   candidateCreated = false;
+  candidates = [ 'Pablo' , 'Ariel'];
+  attempts= [];
   constructor() {
     setTimeout(()  => {
       this.allowNewCandidate = true;
@@ -20,6 +22,8 @@ export class CandidatesComponent implements OnInit {
   }
 
   onCreateCandidate() {
+    this.attempts.push(new Date());
+    this.candidates.push(this.candidateName);
     this.candidateCreated = true;
     this.candidateStatus = `Candidat is created, candidate name is ${this.candidateName}`;
   }
