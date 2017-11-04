@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   section: string;
-  @Input() navigate(section: string) {
+  navigate(section: string) {
     this.section = section;
   }
 }
