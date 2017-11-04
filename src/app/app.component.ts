@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  section: string;
+  section: string = 'Recipes';
   navigate(section: string) {
     this.section = section;
   }
