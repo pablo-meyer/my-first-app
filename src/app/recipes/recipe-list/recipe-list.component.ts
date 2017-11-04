@@ -10,7 +10,7 @@ export class RecipeListComponent implements OnInit {
   @Output() selectRecipeItem= new EventEmitter<Recipe>();
   recipes: Recipe[] = [
     new Recipe('Cake', 'Chocolate Cake', 'https://cdn.pinchofyum.com/wp-content/uploads/Chocolate-Cake-5-1-Yoast.jpg'),
-    new Recipe('Cake', 'Chocolate Cake', 'https://cdn.pinchofyum.com/wp-content/uploads/Chocolate-Cake-5-1-Yoast.jpg')
+    new Recipe('Fake Cake', 'Chocolate Cake', 'https://cdn.pinchofyum.com/wp-content/uploads/Chocolate-Cake-5-1-Yoast.jpg')
   ];
   constructor() { }
   onSelected(recipe: Recipe) {
