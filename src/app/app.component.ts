@@ -5,7 +5,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  section: string;
   @Input() navigate(section: string) {
-    console.log(section);
+    this.section = section;
   }
 }
