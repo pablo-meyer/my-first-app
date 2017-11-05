@@ -6,13 +6,19 @@ export class ShoppingListService {
     private ingredients: Ingredient[] = [
         new Ingredient('Flour', 200),
         new Ingredient('Sugar', 50)
-      ];
+    ];
 
-      getAll() {
-          return this.ingredients.slice();
-      }
-      addIngredient(ingredient: Ingredient) {
+    getAll() {
+        return this.ingredients.slice();
+    }
+    addIngredient(ingredient: Ingredient) {
         this.ingredients.push(ingredient);
         this.ingredientsChanged.emit(this.ingredients.slice());
-      }
+    }
+
+    addIngredients(newIngredients: Ingredient[]) {
+        this.ingredients = this.ingredients.concat(newIngredients);
+        console.log(newIngredients);
+        this.ingredientsChanged.emit(this.ingredients.slice());
+    }
 }
